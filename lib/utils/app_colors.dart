@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+
+class AppColors {
+  static const linear01 =
+      LinearGradient(colors: [Color(0xff3187ee), Color(0xff0a4284)]);
+
+  static const gradientCardSm =
+      LinearGradient(colors: [Color(0xff1c1e28), Color(0xff1c1e28)]);
+
+  static const gradientCardSmLight =
+      LinearGradient(colors: [Color(0xff15171f), Color(0xff15171f)]);
+  static const white = Color(0xFFFFFFFF);
+
+  static const primary = Color(0xFF047BC5);
+  static const secondary = Color(0xFF8F939F);
+  static const success = Color(0xFF16F602);
+  static const warning = Color(0xFFFFC411);
+  static const error = Color(0xFFFF1111);
+  static const lightwhite = Color(0xffA0A0A0);
+  static const darkblue = Color(0xff101218);
+  static const followlistcolor = Color(0xff1C1E28);
+  static const darkerbg = Color(0xff101218);
+  static const transparent = Colors.transparent;
+
+
+}
