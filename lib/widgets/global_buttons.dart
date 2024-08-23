@@ -1,6 +1,6 @@
 
-import 'package:app/utils/app_colors.dart';
-import 'package:app/utils/text_theme.dart';
+import 'package:app/utils/themes/app_colors.dart';
+import 'package:app/utils/themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
 //primary color button
@@ -26,7 +26,7 @@ class PrimaryButton extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 12.0), // Adds padding to the button
         child: Text(
           content,
-          style: textTheme.appTextBodyTextXlBold,
+          style: textTheme.appTextBodyTextXlBold!.copyWith(color: AppColors.white),
           textAlign: TextAlign.center, // Centers the text within the button
         ),
       ),
@@ -54,7 +54,7 @@ class secondaryButton extends StatelessWidget {
             
           ),
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 12.0), // Adds padding to the button
+            padding: EdgeInsets.symmetric(vertical: 10.0), // Adds padding to the button
             child: Text(
               content,
               style: textTheme.appTextBodyTextXlBold,
