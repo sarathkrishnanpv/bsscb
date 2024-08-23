@@ -22,6 +22,11 @@ class WelcomePage extends StatelessWidget {
             SizedBox(
   width: double.infinity, // Takes up as much horizontal space as possible
   child: PrimaryButton(textTheme: textTheme,content: "Login",),
+),
+SizedBox(height: 20,),
+SizedBox(
+  width: double.infinity,
+  child: secondaryButton(textTheme: textTheme, content: 'Signup',),
 )
 
           ],

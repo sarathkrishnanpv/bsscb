@@ -33,3 +33,34 @@ class PrimaryButton extends StatelessWidget {
     );
   }
 }
+
+
+class secondaryButton extends StatelessWidget {
+  const secondaryButton({
+    super.key,
+    required this.textTheme,
+    required this.content,
+  });
+
+  final AppTextTheme textTheme;
+  final String content;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: AppColors.darkblue,width: 2)
+            
+          ),
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 12.0), // Adds padding to the button
+            child: Text(
+              content,
+              style: textTheme.appTextBodyTextXlBold,
+              textAlign: TextAlign.center, // Centers the text within the button
+            ),
+          ),
+        );
+  }
+}
