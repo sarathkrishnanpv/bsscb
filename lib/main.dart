@@ -1,10 +1,19 @@
+import 'package:app/providers/splash_provider.dart';
+import 'package:app/ui/authentication/splash/splash_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:app/ui/authentication/welcome.dart';
 import 'package:app/utils/themes/app_colors.dart';
 import 'package:app/utils/themes/text_theme.dart';
-import 'package:flutter/material.dart';
+
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => SplashScreenProvider(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,9 +24,15 @@ class MyApp extends StatelessWidget {
         extensions: <ThemeExtension<dynamic>>[
           AppTextTheme.fallback(),
         ],
-        scaffoldBackgroundColor: AppColors.lightwhite
+        scaffoldBackgroundColor: AppColors.lightwhite,
       ),
-      home: WelcomePage(),
+      home: Consumer<SplashScreenProvider>(
+        builder: (context, splashScreenProvider, child) {
+          return splashScreenProvider.isVisible
+              ? SplashScreen()
+              : SplashScreen(); // Main screen after the splash
+        },
+      ),
     );
   }
 }

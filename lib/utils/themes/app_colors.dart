@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const linear01 =
-      LinearGradient(colors: [Color(0xff3187ee), Color(0xff0a4284)]);
+      LinearGradient(colors: [Color.fromRGBO(0, 130, 185, 1), Color.fromRGBO(0, 93, 143, 1)]);
 
   static const gradientCardSm =
       LinearGradient(colors: [Color(0xff1c1e28), Color(0xff1c1e28)]);
